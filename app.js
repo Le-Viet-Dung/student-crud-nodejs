@@ -3,6 +3,8 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
+const studentRoutes = require("./routes/student");
+app.use("/students", studentRoutes);
 
 // Trang chủ
 app.get("/", (req, res) => {
